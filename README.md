@@ -1,9 +1,8 @@
 # emoji2image
-## Exports emojis such as: 🥰 😈 💡 to static image (.png) files
+### Exports emojis such as: 🥰 😈 💡 to static image (.png) files
 ### No server setup required. Platform independent. Just 🖱 double-click HTML file.
 
-### Includes the following:
-## Preview
+### Preview
 <br/>![Preview](https://miro.medium.com/max/1050/1*6k1Ii-MS99jKUEnuuxSmWw.png)
 ---
 ## Image Export

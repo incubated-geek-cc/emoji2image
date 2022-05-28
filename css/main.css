@@ -1,0 +1,63 @@
+html,body {
+  padding:0;
+  margin:0;
+  overflow: hidden;
+}
+body {
+    height:100vh;
+    width:100vw;
+    overflow-y: auto;
+}
+input[type=file] {
+  display:none;
+}
+.table td, .table th {
+    padding: 0.25rem;
+}
+.table th {
+    vertical-align: middle;
+}
+.custom-card-title {
+    font-variant: all-petite-caps;
+}
+#canvasDisplayCell,
+#canvasDisplay {
+    vertical-align: middle;
+    background:transparent;
+    overflow:hidden;
+}
+#canvasDisplay {
+    overflow:auto;
+}
+.previewedImage {
+    border:1px dotted #6c757d;
+    width:352px;
+    height:352px;
+    margin:2.5px auto;
+}
+.unicode {
+    font-family:Cambria;
+}
+.emoji {
+    font-family:Segoe Ui Emoji;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+.form-control {
+    display: inline-block;
+    width: auto;
+}
+.custom-old-style-num {
+    font-variant: oldstyle-nums;
+}
+#resizedIconW, 
+#resizedIconH {
+    font-size: x-small;
+}

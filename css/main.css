@@ -20,15 +20,6 @@ input[type=file] {
 .custom-card-title {
     font-variant: all-petite-caps;
 }
-#canvasDisplayCell,
-#canvasDisplay {
-    vertical-align: middle;
-    background:transparent;
-    overflow:hidden;
-}
-#canvasDisplay {
-    overflow:auto;
-}
 .previewedImage {
     border:1px dotted #6c757d;
     width:352px;
@@ -53,11 +44,4 @@ input[type=file] {
 .form-control {
     display: inline-block;
     width: auto;
-}
-.custom-old-style-num {
-    font-variant: oldstyle-nums;
-}
-#resizedIconW, 
-#resizedIconH {
-    font-size: x-small;
 }

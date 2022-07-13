@@ -71,6 +71,8 @@ if (document.readyState === 'complete' || document.readyState !== 'loading' && !
 
         let equalAspectRatio=document.getElementById('equalAspectRatio');
 
+        const removeAllChildNodes = ((parentEle) => parentEle.children.length > 0  ? parentEle.removeChild(parentEle.children[0]) : null);
+
         async function generateFavicon(sizeW,sizeH,icon) {
             textIcon.innerText=icon;
 
@@ -123,9 +125,7 @@ if (document.readyState === 'complete' || document.readyState !== 'loading' && !
 
             ctx.fillText(icon, _x, _y);
             
-            if (canvasDisplay.children.length>0) {
-              canvasDisplay.removeChild(canvasDisplay.children[0]);
-            }
+            removeAllChildNodes(canvasDisplay);
             canvasDisplay.appendChild(canvas);
             document.getElementById('faviconDimensionsDisplay').innerText=`${canvas.width}px × ${canvas.height}px`;
 

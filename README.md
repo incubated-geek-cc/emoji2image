@@ -9,7 +9,7 @@
 
 <div align="left">
 
-### Usages
+### 🎨 Usages
 
 </div>
 <div align="left">
@@ -18,13 +18,13 @@
 	<li>For digital art designs such as web icon</li>
 	<li>As placeholder image</li>
 </ul>
-<div>...and plenty of other use-cases not mentioned in this list!</div>
+<i>...and plenty of other use-cases not mentioned on this list!</i>
 
-### 🌟 Try it yourself!
+### 🌟 Try it yourself
 [**Live Demo :: Link**](https://incubated-geek-cc.github.io/emoji2image)
 
-### ✍ Read the post here!
-[**Live Demo :: Link**](https://geek-cc.medium.com/convert-font-emojis-to-image-files-with-custom-dimensions-using-vanilla-javascript-d276703567b6)
+### ✍ Read related post here
+[**Article :: Link**](https://geek-cc.medium.com/convert-font-emojis-to-image-files-with-custom-dimensions-using-vanilla-javascript-d276703567b6)
 
 ### 📌 Features
 

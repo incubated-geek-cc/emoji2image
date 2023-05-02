@@ -24,7 +24,7 @@
 [**Live Demo :: Link**](https://incubated-geek-cc.github.io/emoji2image)
 
 ### ✍ Read related post here
-[**Article :: Link :: Convert Font Emojis to Image Files with Custom Dimensions using Vanilla JavaScript 👩‍💻**](https://geek-cc.medium.com/convert-font-emojis-to-image-files-with-custom-dimensions-using-vanilla-javascript-d276703567b6)
+[**Article :: Link**](https://geek-cc.medium.com/convert-font-emojis-to-image-files-with-custom-dimensions-using-vanilla-javascript-d276703567b6)
 
 ### 📌 Features
 

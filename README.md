@@ -26,6 +26,8 @@
 ### ✍ Read related post here
 [**Article :: Link**](https://geek-cc.medium.com/convert-font-emojis-to-image-files-with-custom-dimensions-using-vanilla-javascript-d276703567b6)
 
+[**Article :: Link**](https://geek-cc.medium.com/export-font-emoji-as-image-with-custom-os-design-using-css-and-client-side-javascript-78fe4b32d9ce)
+
 ### 📌 Features
 
 </div>
@@ -41,6 +43,9 @@
 
 ### 👀 Preview
 <img src='https://github.com/incubated-geek-cc/emoji2image/raw/main/img/preview.png' width="800px" />
+
+* As of Aug 2024:
+<img src='https://miro.medium.com/v2/resize:fit:640/format:webp/1*VYKRvLXEideq6Iv8jGlaHA.gif' width="800px" />
 
 <p>— <b>Join me on 📝 <b>Medium</b> at <a href='https://medium.com/@geek-cc' target='_blank'>~ ξ(🎀˶❛◡❛) @geek-cc</a></b></p>
 

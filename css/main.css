@@ -20,17 +20,29 @@ input[type=file] {
 .custom-card-title {
     font-variant: all-petite-caps;
 }
+#canvasDisplayCell,
+#canvasDisplay {
+    vertical-align: middle;
+    background:transparent;
+    overflow:hidden;
+}
+#canvasDisplay {
+    overflow:auto;
+}
 .previewedImage {
     border:1px dotted #6c757d;
     width:352px;
     height:352px;
     margin:2.5px auto;
 }
+.symbol {
+    font-family:Segoe UI Symbol !important;
+}
 .unicode {
-    font-family:Cambria;
+    font-family:Cambria !important;
 }
 .emoji {
-    font-family:Segoe Ui Emoji;
+    font-family:Segoe UI Emoji !important;
 }
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
@@ -45,3 +57,27 @@ input[type=file] {
     display: inline-block;
     width: auto;
 }
+.custom-old-style-num {
+    font-variant: oldstyle-nums;
+}
+#resizedIconW, 
+#resizedIconH {
+    font-size: x-small;
+}
+/*select#emoji_version option::after {
+  content: url(icon-windows.png);
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  pointer-events: none;
+}*/
+/*
+select#emoji_version option::after,
+select#emoji_version option::before,
+select#emoji_version::after,
+select#emoji_version::before {
+    content: "---";
+}*/

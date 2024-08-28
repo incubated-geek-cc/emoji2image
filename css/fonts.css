@@ -1,0 +1,50 @@
+@font-face {
+   font-family: EmojiFontWin8;
+   src: url(fonts/seguiemj-win8.ttf);
+}
+@font-face {
+   font-family: EmojiFontWin10;
+   src: url(fonts/seguiemj-win10.ttf);
+}
+@font-face {
+   font-family: EmojiFontWin11;
+   src: url(fonts/seguiemj-win11.ttf);
+}
+@font-face {
+   font-family: EmojiFont3D145;
+   src: url(fonts/seguiemj-1.45-3d.ttf);
+}
+@font-face {
+   font-family: EmojiFontFlat113;
+   src: url(fonts/seguiemj-1.13-flat.ttf);
+}
+
+
+.EmojiFontWin8 {
+    font-family:EmojiFontWin8 !important;
+}
+.EmojiFontWin10 {
+    font-family:EmojiFontWin10 !important;
+}
+.EmojiFontWin11 {
+    font-family:EmojiFontWin11 !important;
+}
+.EmojiFont3D145 {
+    font-family:EmojiFont3D145 !important;
+}
+.EmojiFontFlat113 {
+    font-family:EmojiFontFlat113 !important;
+}
+
+
+
+
+@font-face {
+   font-family: AppleColorEmoji;
+   src: url(fonts/AppleColorEmoji.ttf);
+}
+
+.AppleColorEmoji {
+    font-family:AppleColorEmoji !important;
+}
+

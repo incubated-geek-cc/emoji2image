@@ -2,6 +2,7 @@
 <html lang='en' class='notranslate' translate='no'>
   <head>
     <meta name='google' content='notranslate' />
+    <meta http-equiv='Content-Language' content='en' />
     <meta charset='UTF-8'>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -9,9 +10,7 @@
     <meta name='description' content='Client-side web app that enables emojis to be exported as images of any dimensions stated.'>
     <meta name='keywords' content='JavaScript,CSS,Bootstrap,HTML,Canvas,Image,Resize,Emoji'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' />
-    <meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1' />  
-    <meta http-equiv='Content-Language' content='en' />
+    <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' /> 
     <title>emoji2image | 🕳️ Export emoji icon as image.</title>
     <meta name='msapplication-TileColor' content='#ffffff' />
     <meta name='theme-color' content='#ffffff' />
@@ -24,22 +23,37 @@
     <link href='css/bootstrap-4.5.2.min.css' rel='stylesheet' type='text/css' />
     <link href='css/offcanvas.css' rel='stylesheet' type='text/css' />
     <link href='css/main.css' rel='stylesheet' type='text/css' />
+    <link href='css/fonts.css' rel='stylesheet' type='text/css' />
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div class='container-fluid h-100 p-4'>
-            <div class='row h-100'>
+        <div class='container-fluid h-100 p-2'>
+            <div class='row'>
                 <div class='col-sm-5 col-12 h-100'>
-                  <div class="card h-100 rounded-0">
+                  <div class="card rounded-0 h-100">
                     <div class="card-header rounded-0 pl-1 pb-2 pt-2 pr-1 bg-light noselect">ξ(🎀˶❛◡❛) <span class='custom-card-title'>emoji2image</span></div>
-                    <div class="card-body h-100 p-1">
+                    <div id="selectionDIV" class="card-body p-1">
 
                         <div class='row w-100 m-0 border'>
-                            <div class='col-sm-5 col-5 m-1 pl-0 pr-0 text-center'>
-                                <div id='textIcon' class='border border-muted pl-1 pr-1 pt-2 pb-2 m-0 w-100 emoji'></div>
+                            <div class='col-sm-3 col-3 m-1 pl-0 pr-0 text-center'>
+                                <div id='textIcon' class='border border-muted pl-1 pr-1 pt-2 pb-2 m-0 w-100'></div>
                             </div>
-                            <div class='col-sm-5 col-5 m-1 pl-0 pr-0 text-left'>
-                                <button id='copyTextIcon' type='button' value='textIcon' class='btn btn-sm btn-outline-dark rounded-circle ml-1 mr-0 mt-1 mb-1 pt-1 pb-1 pl-2 pr-2 emoji'>📋</button><span class='unicode'>ᶜᵒᵖʸ ᵃˢ ᵗᵉˣᵗ</span>
+                            <div class='col-sm-4 col-4 m-1 pl-0 pr-0 text-left'>
+                                <button id='copyTextIcon' type='button' value='textIcon' class='btn btn-sm btn-outline-dark rounded-circle ml-1 mr-1 mt-1 mb-1 pt-1 pb-1 pl-2 pr-2 emoji'>📋</button><span class='unicode'>ᶜᵒᵖʸ ᵃˢ ᵗᵉˣᵗ</span>
+                            </div>
+                            <div class="col-sm-4 col-4 m-1 pl-0 pr-0 text-center">
+                                <div class="form-check-inline">
+                                  <label class='form-check-inline unicode' for="emoji_version">ᵉᵐᵒʲⁱ ᵛᵉʳˢⁱᵒⁿ</label>
+                                  <select class="form-control form-control-sm" id="emoji_version">
+                                    <option value='emoji' selected>(Default)</option>
+                                    <option value='EmojiFontFlat113'>🪟 Windows 11 ¹˙¹³ 🇳🇴🇷🇲🇦🇱 🇪🇾🇪🇸</option>
+                                    <option value='EmojiFontWin11'>🪟 Windows 11 ¹˙³⁵ 🇧🇮🇬 🇪🇾🇪🇸</option>
+                                    <option value='EmojiFont3D145'>🪟 Windows 11 ¹˙⁴⁵ 3D</option>
+                                    <option value='EmojiFontWin10'>🪟 Windows 10</option>
+                                    <option value='EmojiFontWin8'>🪟 Windows 8</option>
+                                    <option value='AppleColorEmoji'>🍎 macOS/iOS</option>
+                                  </select>
+                                </div>  
                             </div>
                         </div>
                        
@@ -47,7 +61,7 @@
 
                         <div class='row w-100 m-0 border'>
                             <div class='col-sm-11 col-12 m-1 pl-0 pr-0 text-center'>
-                                <h3 class='small p-1 m-0 text-secondary text-left'>Select Emoji:</h3>
+                                <h3 class='small p-1 m-0 text-secondary text-left'>Select Category:</h3>
                                 <form class='p-0 m-0'>
                                     <div class="input-group input-group-sm w-100">
                                       <div class="input-group-prepend w-50">
@@ -59,7 +73,7 @@
                                             <small class='emoji'>🚶</small><span class='unicode'>ᵖᵉᵒᵖˡᵉ</span>
                                         </small>
                                       </div>
-                                      <select id="smileys_n_ppl" class="custom-select custom-card-title rounded-0 emoji w-50"></select>
+                                      <select id="smileys_n_ppl" class="custom-select custom-card-title rounded-0 w-50"></select>
                                     </div>
 
 
@@ -73,7 +87,7 @@
                                             <small class='emoji'>🌵</small><span class='unicode'>ⁿᵃᵗᵘʳᵉ</span>
                                         </small>
                                       </div>
-                                      <select id="animals_n_nature" class="custom-select custom-card-title rounded-0 emoji w-50"></select>
+                                      <select id="animals_n_nature" class="custom-select custom-card-title rounded-0 w-50"></select>
                                     </div>
 
                                     <div class="input-group input-group-sm w-100">
@@ -87,7 +101,7 @@
                                             <small class='emoji'>🍴</small><span class='unicode'>ᶜᵘᵗˡᵉʳʸ</span>
                                         </small>
                                       </div>
-                                      <select id="fnb" class="custom-select custom-card-title rounded-0 emoji w-50"></select>
+                                      <select id="fnb" class="custom-select custom-card-title rounded-0 w-50"></select>
                                     </div>
 
                                     <div class="input-group input-group-sm w-100">
@@ -100,7 +114,7 @@
                                             <small class='emoji'>🎨</small><span class='unicode'>ʰᵒᵇᵇⁱᵉˢ</span>
                                         </small>
                                       </div>
-                                      <select id="activity" class="custom-select custom-card-title rounded-0 emoji w-50"></select>
+                                      <select id="activity" class="custom-select custom-card-title rounded-0 w-50"></select>
                                     </div>
 
                                     <div class="input-group input-group-sm w-100">
@@ -113,7 +127,7 @@
                                             <small class='emoji'>✈️</small><span class='unicode'>ᵗʳᵃᵛᵉˡ</span>
                                         </small>
                                       </div>
-                                      <select id="commute_n_places" class="custom-select custom-card-title rounded-0 emoji w-50"></select>
+                                      <select id="commute_n_places" class="custom-select custom-card-title rounded-0 w-50"></select>
                                     </div>
 
                                     <div class="input-group input-group-sm w-100">
@@ -126,7 +140,7 @@
                                             <small class='emoji'>🔍</small><span class='unicode'>ᵗᵒᵒˡˢ</span>
                                         </small>
                                       </div>
-                                      <select id="objects" class="custom-select custom-card-title rounded-0 emoji w-50"></select>
+                                      <select id="objects" class="custom-select custom-card-title rounded-0 w-50"></select>
                                     </div>
 
                                     <div class="input-group input-group-sm w-100">
@@ -139,17 +153,28 @@
                                             <small class='emoji'>⚠️</small><span class='unicode'>ˢʸᵐᵇᵒˡˢ</span> 
                                         </small>
                                       </div>
-                                      <select id="symbols" class="custom-select custom-card-title rounded-0 emoji w-50"></select>
+                                      <select id="symbols" class="custom-select custom-card-title rounded-0 w-50"></select>
                                     </div>
+
+                                 <!--    <div class="input-group input-group-sm w-100">
+                                      <div class="input-group-prepend w-50">
+                                        <div class="input-group-text rounded-0 pt-0 pb-0 w-25">
+                                          <input name="category" class="emoji-category" type="radio" value="custom" />
+                                        </div>
+                                        <small class="input-group-text w-75">
+                                            <small class='emoji'>⌶⎁</small><span class='unicode'>ᶜᵘˢᵗᵒᵐ ⁱⁿᵖᵘᵗ ˢʸᵐᵇᵒˡ</span>
+                                        </small>
+                                      </div>
+                                      <select id="custom" class="custom-select custom-card-title rounded-0 w-25 symbol"></select>
+                                      <input id="customInput" class="form-control custom-card-title rounded-0 symbol w-25" />
+                                    </div> -->
                                  </form>
                             </div>
                         </div>
                     </div>
                   </div>
                 </div>
-
-
-                <div class='col-sm-7 col-12'>
+                <div class='col-sm-7 col-12 h-100'>
                   <div class="card rounded-0 h-100">
                     <div class="card-header rounded-0 p-1 bg-light noselect">
                         <div class="custom-control custom-switch m-0 float-left">
@@ -166,14 +191,13 @@
 
                         <button id='saveImageBtn' type='button' value='textIcon' class='btn btn-sm btn-outline-dark rounded-circle m-0 pt-1 pb-1 pl-2 pr-2 float-right emoji small'>💾</button><span class='unicode float-right'>ˢᵃᵛᵉ ᵃˢ ⁱᵐᵃᵍᵉ</span>
                     </div>
-                    <div class="card-body p-1">
+                    <div id="resizeDIV" class="card-body p-1">
                         <div id='canvasDisplayCell' class='m-0 w-100 h-100 text-center'>
                             <small id='faviconDimensionsDisplay' class='text-muted m-0 p-0'></small>
                             <div id='canvasDisplay' class='text-muted m-0 p-0'></div>
                         </div>
                     </div>
                   </div>
-
                 </div>
             </div>
         </div>

@@ -139,13 +139,8 @@ document.addEventListener('DOMContentLoaded', async() => {
     let currentMin=currentDatetime.getMinutes();
     faviconIcon=(currentMin>30) ? (halfHourIcon[currentHour]) : faviconIcon; 
 
-    let canvasDisplay=document.getElementById('canvasDisplay');
-    let canvasDisplayCell=document.getElementById('canvasDisplayCell');
-    canvasDisplayCell['style']['width']=`${canvasDisplayCell.clientWidth}px`;
-    canvasDisplayCell['style']['height']=`${canvasDisplayCell.clientHeight}px`;
-
-    canvasDisplay['style']['max-width']=`${canvasDisplayCell.clientWidth}px`;
-    canvasDisplay['style']['max-height']=`calc( ${canvasDisplayCell.clientHeight}px - 1.875rem - 4px )`;
+    const canvasDisplay=document.getElementById('canvasDisplay');
+    const canvasDisplayCell=document.getElementById('canvasDisplayCell');
 
 
     let textIcon=document.getElementById('textIcon');
@@ -225,6 +220,13 @@ document.addEventListener('DOMContentLoaded', async() => {
     }
     let iconData = await generateFavicon(faviconSize,faviconSize,faviconIcon);
 
+
+    canvasDisplayCell['style']['width']=`${canvasDisplayCell.clientWidth}px`;
+    canvasDisplayCell['style']['height']=`${canvasDisplayCell.clientHeight}px`;
+
+    canvasDisplay['style']['max-width']=`${canvasDisplayCell.clientWidth}px`;
+    canvasDisplay['style']['max-height']=`calc( ${canvasDisplayCell.clientHeight}px - 1.875rem - 4px )`;
+    
     async function renderIcon() {
         canvas.getContext('2d').clearRect(0, 0,w,h);
 

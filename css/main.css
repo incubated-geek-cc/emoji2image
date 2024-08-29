@@ -65,7 +65,7 @@ input[type=file] {
     font-size: x-small;
 }
 #resizeDIV {
-   display: ruby;
+   display: flex;
 }
 /*select#emoji_version option::after {
   content: url(icon-windows.png);
